@@ -1,0 +1,12 @@
+<h3>New School Class Form</h3>
+
+<%= form_tag school_classes_path do %>
+  <label>Class title:</label><br>
+  <%= text_field_tag :"school_class[title]" %><br>
+
+  <label>Class room number:</label><br>
+  <%= text_field_tag :"school_class[room_number]" %><br>
+
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <%= submit_tag "Create School class" %>
+<% end %>

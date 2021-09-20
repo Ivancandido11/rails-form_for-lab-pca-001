@@ -1,0 +1,12 @@
+<h3>Edit School Class Form</h3>
+
+<%= form_for @school_class do |f| %>
+  <label>Class title:</label><br>
+  <%= f.text_field :title %><br>
+
+  <label>Class room number:</label><br>
+  <%= f.text_field :room_number %><br>
+
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <%= f.submit %>
+<% end %>
